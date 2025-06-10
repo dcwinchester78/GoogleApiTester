@@ -1,0 +1,46 @@
+@page "/"
+
+<PageTitle>Birthday Checker</PageTitle>
+
+<h1>Birthday Checker</h1>
+
+<p>Select your birthday and click the button to see if it's your special day!</p>
+
+<div class="mb-3">
+    <label for="birthdayInput" class="form-label">Your Birthday:</label>
+    <InputDate id="birthdayInput" @bind-Value="SelectedBirthday" class="form-control" />
+</div>
+
+<button class="btn btn-primary" @onclick="CheckBirthday">Check Birthday</button>
+
+@if (!string.IsNullOrEmpty(Message))
+{
+    <div class="mt-3 alert @(Message.Contains("Happy") ? "alert-success" : "alert-info")" role="alert">
+        @Message
+    </div>
+}
+
+@code {
+    private DateTime? SelectedBirthday { get; set; }
+    private string Message { get; set; } = string.Empty;
+
+    private void CheckBirthday()
+    {
+        if (SelectedBirthday.HasValue)
+        {
+            DateTime today = DateTime.Today;
+            if (SelectedBirthday.Value.Month == today.Month && SelectedBirthday.Value.Day == today.Day)
+            {
+                Message = "Happy Birthday!";
+            }
+            else
+            {
+                Message = "Today is not your birthday.";
+            }
+        }
+        else
+        {
+            Message = "Please select your birthday.";
+        }
+    }
+}
