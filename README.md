@@ -9,7 +9,7 @@ This is a Blazor Server app built with ASP.NET Core 9 that allows users to enter
 
 ### 🧱 Phase 1: Environment Setup
 
-#### ✅ Step 1: Install .NET 9 SDK
+#### - [x] Step 1: Install .NET 9 SDK
 
 Installing the .NET 9 SDK is the first step. There are multiple ways to install the SDK depending on your operating system and preferences. It is highly recommended to consult the official Microsoft .NET download page for the most current and comprehensive guidance:
 - **Official .NET 9 Download Page:** [https://dotnet.microsoft.com/download/dotnet/9.0](https://dotnet.microsoft.com/download/dotnet/9.0)
@@ -90,13 +90,13 @@ If you plan to use Visual Studio, ensure you have a compatible version. Check th
 
 ### 🧱 Phase 2: Project Creation
 
-#### ✅ Step 2: Create Blazor Server App  
+#### - [x] Step 2: Create Blazor Server App
 ```bash
 dotnet new blazorserver -n BirthdayChecker
 cd BirthdayChecker
 ```
 
-#### ✅ Step 3: Clean Up Template  
+#### - [x] Step 3: Clean Up Template
 - Remove example pages (`Counter.razor`, `FetchData.razor`)  
 - Update navigation links to point to your pages
 
@@ -104,11 +104,11 @@ cd BirthdayChecker
 
 ### 🧠 Phase 3: Define Application State
 
-#### ✅ Step 4: Create Birthday Model  
+#### - [x] Step 4: Create Birthday Model
 - Define a simple `Birthday` class with `Name` and `DateOfBirth` properties  
 - Create an in-memory `List<Birthday>` to store birthday entries during runtime
 
-#### ✅ Step 5: Create a Scoped AppState Service (optional)  
+#### - [x] Step 5: Create a Scoped AppState Service (optional)
 - Encapsulate the list and related logic in a singleton or scoped service  
 - Inject this service into components that access or modify birthdays
 
@@ -116,30 +116,30 @@ cd BirthdayChecker
 
 ### 🖥️ Phase 4: Build Core UI Components
 
-#### ✅ Step 6: AddBirthday.razor  
+#### - [x] Step 6: AddBirthday.razor
 - Form with inputs for name and birthdate  
 - Adds new entries to the in-memory list
 
-#### ✅ Step 7: BirthdayList.razor  
+#### - [x] Step 7: BirthdayList.razor
 - Display all birthdays currently in memory  
 - Show name and formatted date
 
-#### ✅ Step 8: TodayBirthday.razor  
+#### - [x] Step 8: TodayBirthday.razor
 - Filter and display birthdays matching today’s month and day
 
-#### ✅ Step 9: Update Navigation  
+#### - [x] Step 9: Update Navigation
 - Add links to each component in `NavMenu.razor`
 
 ---
 
 ### 🧪 Phase 5: Testing and Validation
 
-#### ✅ Step 10: Manual UI Testing  
+#### - [x] Step 10: Manual UI Testing
 - Add test birthdays  
 - Reload and verify entries disappear (no persistence)  
 - Check that today’s birthday logic works correctly
 
-#### ✅ Step 11: Add Form Validation  
+#### - [x] Step 11: Add Form Validation
 - Validate required fields  
 - Ensure valid date input
 
@@ -147,18 +147,18 @@ cd BirthdayChecker
 
 ### 🎨 Phase 6: UI Polish
 
-#### ✅ Step 12: Improve Layout  
+#### - [x] Step 12: Improve Layout
 - Apply Bootstrap or your preferred CSS framework  
 - Use cards, tables, or alerts for better visual structure
 
-#### ✅ Step 13: Add Icons or Emojis  
+#### - [x] Step 13: Add Icons or Emojis
 - Add 🎂 emoji or other birthday indicators for a friendly touch
 
 ---
 
 ### 🚀 Phase 7: (Optional) Runtime Enhancements
 
-#### ✅ Step 14: Add Extra Features  
+#### - [x] Step 14: Add Extra Features
 - Show upcoming birthdays within the next 7 days  
 - Export the birthday list to JSON  
 - Use browser localStorage via JS interop to persist data across sessions  
