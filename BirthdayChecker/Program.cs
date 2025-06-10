@@ -1,10 +1,12 @@
 using BirthdayChecker.Components;
+using BirthdayChecker.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+builder.Services.AddScoped<BirthdayService>();
 
 var app = builder.Build();
 
